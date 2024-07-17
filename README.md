@@ -2,6 +2,10 @@
 
 project for assessment
 
+Tutorial from CodingNepal
+https://www.youtube.com/watch?v=6QE8dXq9SOE&list=PLpwngcHZlPae68z_mLFNfbJFIJVJ_Zcx2&index=4
+
+
 topics: JavaScript
 
 
