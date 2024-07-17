@@ -1,0 +1,145 @@
+﻿/* Stylesheet Slideshow ///// 
+https://www.youtube.com/watch?v=6QE8dXq9SOE&list=PLpwngcHZlPae68z_mLFNfbJFIJVJ_Zcx2&index=4 */
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+
+/* Pfeile links und rechts zum Durchklicken */
+.wrapper i {
+    height: 50px;
+    width: 50px;
+    background: black;
+    text-align: center;
+    font-size: 1.7rem;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+        /* top+transform: Pfeile horizontal mittig */
+    box-shadow: 0 3px 6px black;
+}
+
+.wrapper i:first-child {
+    left: -22px;
+}
+
+.wrapper i:last-child {
+    right: -22px;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+        /* setzt Bilder nebeneinander (negiert Listenausrichtung???) */
+    grid-auto-columns: calc((100% / 3) - 12px);
+        /* Breite der column */
+    grid-gap: 16px;
+    overflow-x: auto; 
+    /* Scrollbar anlegen */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+}
+
+/* Scrollbar verstecken */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel :where(.card, .image) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+        /* zentriert Kreis hinter Bildern */
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    list-style: none;
+    height: 342px;
+    background: #03726e;
+    border-radius: 8px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+        /* setzt Bild+Text untereinander */
+    align-items: center;
+        /* setzt Bild+Text horizontal mittig */
+    justify-content: center;
+        /* setzt Bild+Text vertikal mittig */   
+    cursor: pointer;
+}
+
+.card .image {
+    background: white;
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+        /* Kreis hinter Bildern */
+}
+
+.card .image img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #03726e;
+        /* Bilder */
+}
+
+.card .h2 {
+    font-weight: 500;
+    font-size: 2.4rem;
+    margin: 30px 0 5px;
+}
+
+.card span {
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}

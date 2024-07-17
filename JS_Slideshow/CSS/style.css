@@ -1,0 +1,904 @@
+/* Stylesheet Autorenwebsite */
+
+
+/* Variablen für Farben */
+
+@import "style_slideshow.css";
+
+:root {
+    --blue: #00ebff;
+    --black: #000;
+    --darkgrey: #4e4e4e;
+    --lightgrey: #9d9d9d;
+}
+
+
+/* 
+Reset --> for responsive Webdesign
+*/
+
+* {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+    /* packt Inhalt und Padding in eine Box */
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* 
+LAYOUT 
+*/
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--black);
+    background-image: url(background.png);
+    background-size: cover;
+    color: white;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    border-color: var(--black);
+}
+
+body {
+    max-width: 960px;
+    min-width: 300px;
+    margin: auto;
+    padding: 0 3rem;
+    
+    font-family: Consolas, system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", sans-serif;
+    font-size: 1.2rem;   
+    line-height: 1.6rem;
+}
+
+
+
+
+
+/* HIDDEN */
+
+.hidden {
+    visibility: hidden;
+    margin: 0;
+}
+
+
+
+/*Navigation Sections*/
+
+.site-nav, .dagger-center {
+    margin-bottom: 30rem;    
+}
+
+nav ul, .dagger-center ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-flow: row;
+}
+
+nav li, .dagger-center li {
+    list-style-type: none;
+    
+}
+
+.sections {
+    background: transparent;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+    min-width: 5rem;
+    max-width: 10rem;
+    height: 3rem;
+    padding: .5rem 1rem;;
+    border: 2px solid var(--lightgrey);
+    margin: 1rem;
+    text-transform: uppercase;
+}
+
+a.sections:hover,
+a.sections:focus
+{
+    background-color: white;
+    color: var(--black);
+    font-weight: bold;
+}
+
+.dagger-center {
+    margin: 2rem 0 8rem;
+}
+
+
+/* Navigationen am Rand (links und rechts) */
+
+
+
+.navbarr ul {
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-end;
+    justify-content: center;   
+}
+
+.navbarl ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.navbarl a, .navbarr a {
+    background-color: rgba(78, 78, 78, 0.42);
+    color: var(--lightgrey);
+    font-size: 1rem; 
+}
+
+.navbarl a:hover, .navbarr a:hover {
+    background-color: var(--black);
+    color: var(--blue);
+    font-weight: 100;
+}
+
+
+.nav-right li, .nav-left li {
+    margin: .8rem;
+}
+
+nav-left a {
+    float: left; 
+}
+ 
+nav-right a {
+    float: right;
+}
+
+
+
+/* Navigation Bücher */
+
+.book-nav ul {
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* BUTTONS */
+
+    /* Pfeil nach oben */    
+
+a.back-to-top {
+    position: fixed;
+    bottom: .5rem;
+    right: .5rem;
+
+    font-size: 1.5rem;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+
+    background-color: rgb(0, 0, 0, 1);
+    color: var(--blue);
+    transition: background .3s ease-in-out;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+}
+
+a.back-to-top:hover,
+a.back-to-top:focus {
+    background-color: var(--darkgrey);
+}
+
+    /* Dagger/Button zu Büchern */
+.dagger {
+    font-size: 2.5em;
+    color: var(--darkgrey);
+    text-align: center;
+    rotate: 90deg;
+}
+
+
+
+
+/* LINKS */
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+section a:hover,
+section a:focus {
+    color: var(--lightgrey);
+    outline: 1px pointer;
+}
+
+section a:visited {
+    color: white;
+}
+
+
+/* Anker mit id */
+
+.anker {
+	visibility: hidden;
+	height: 0px !important;
+	position: absolute;
+	margin: -20px;
+}
+
+
+
+/* Überschriften */
+
+h1 {
+    text-align: center;
+    line-height: .9em;
+    font-variant-caps: small-caps;
+    font-weight: 200;
+    margin-top: 15rem;
+    margin-bottom: 10rem;
+    font-size: 4rem;
+    letter-spacing: .4rem;
+    max-width: auto;
+}
+
+h2 {
+    text-align: left;
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+    line-height: 1.3em;
+    font-variant-caps: small-caps;
+    font-weight: 200;
+    letter-spacing: .1rem;
+    max-width: auto;
+}
+
+h3 {
+    padding-bottom: 1rem;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    font-weight: 600;
+    font-variant-caps: small-caps;
+    letter-spacing: .4rem;
+    max-width: auto;
+}
+
+h4 {
+    padding-bottom: 5rem;
+    font-size: 2rem;
+    font-weight: 100;
+    font-variant-caps: small-caps;
+    text-align: center;
+    text-decoration: overline;
+    max-width: auto;
+}
+
+
+/* Beschreibungstexte */
+
+
+p {
+    margin-bottom: 0.5rem;
+}
+
+
+
+blockquote, cite {
+    text-align: center;
+    font-weight: 100;
+    font-size: 1.5rem;
+    line-height: 1.3em;
+    color: white;
+    text-shadow: 0 0 15px var(--black);
+    
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 5rem;
+    padding: 0;
+}
+
+cite {
+    font-style: normal;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+article {
+    margin-bottom: 30rem;
+}
+
+
+.two-col {
+    margin-bottom: .5rem;
+    column-count: 2;
+    column-fill: balance;
+    column-gap: 3rem;
+}
+
+.main-descr {
+    margin: 2rem 4rem 3rem;
+}
+
+.main-page {
+    margin: 0rem;
+}
+
+
+/* VITA */
+
+.vita-flex {
+    display: flex;
+    flex-wrap: row wrap;
+    margin: 5rem 0rem 30rem 0rem;
+    justify-content: space-between;
+}
+
+.flex-row-pic {
+    width: 30%;
+    float: right;
+}
+
+.flex-row-text {
+    max-width: 70%;
+}
+
+
+.circle {
+    border-radius: 100px;
+    width: auto;
+}
+
+/* Vita Unterseite */
+
+.vita {
+    margin: 5rem 3rem 0rem 3rem;
+    column-count: 2;
+    column-fill: balance;
+    column-gap: 3rem;  
+}
+
+
+.vita p {
+    padding-bottom: .2rem;
+}
+
+
+    /* Vita - Tabelle für Lebenslauf */
+table {
+    border-collapse: collapse;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin: 0rem 5rem 20rem;
+        }
+
+thead {
+    font-size: 1.2rem;            
+        }
+td {
+    padding: .5rem 1.7rem;
+    vertical-align: top;
+    width: 50%;  
+    min-width: 250px;
+        }
+
+
+th {
+    padding-bottom: 1.5rem;
+    text-indent: 3rem;
+    width: 50%;
+    text-align: left;
+}
+
+
+
+/* Stages / Cover / Bilder*/
+
+img {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px var(--lightgrey);
+}
+
+img.blue-border:hover {
+    padding: 1px;
+    background-color: var(--blue);
+}
+
+figcaption {
+    margin-top: .5rem;
+    text-align: center;
+    font-size: 1rem;
+}
+    
+.bildtext {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: .4rem;
+    font-size: 3rem;
+    font-variant-caps: all-small-caps;
+    font-weight: 200;
+    letter-spacing: .3rem;
+    line-height: 1.3em;
+    text-shadow: 0 0 5px var(--black);
+    border-radius: 0px 0px 10px 10px;
+    background-color: rgba(0, 0, 0, 0.69);
+}
+
+
+.stage {
+    margin-bottom: 0rem;
+    position: relative;
+    margin: auto;
+}
+
+
+
+
+
+
+
+/* ------------------------- UNTERSEITEN --------------------- */
+
+/* Bücher / Text */
+
+.book-content  {
+    margin: 0;
+    padding: 0;
+}
+
+.home-nav nav {
+    margin: 0;
+    margin-bottom: 10rem;
+    margin-top: 3rem;    
+}
+
+.home-nav a {
+    font-size: .7rem;
+}
+
+.book-section-nav {
+    margin: 10rem 0;
+    display: flex;
+    flex-direction: row;
+    column-count: 2;
+    column-fill: balance;
+    justify-content: space-between;
+}
+
+.book-section-nav a:hover, .book-section-nav a:active {
+    background-color: var(--black);
+    color: var(--blue);  
+}
+
+.book-section-nav li {
+    margin: 1rem 0;
+}
+
+.book-section-nav a {
+    margin: 1rem 0;
+    font-size: 0.8rem;
+}
+
+.files-nav {
+    margin-top: 2rem;
+}
+
+
+.series {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.series-book {
+    margin-bottom: 5rem;
+    text-align: center;
+    font-weight: 100;
+    font-size: 4rem;
+    line-height: 1.1em;
+}
+
+.books {
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    }
+
+.books {
+    text-align: left;
+    max-width: 80vw;
+}
+
+
+.cover {
+    width: 30%;
+    margin: 2rem 0;
+}
+
+
+
+/* Files */
+
+
+.charafiles img {
+    border: 1px solid white;
+    border-radius: 0px;
+    box-shadow: none;
+    border-top: none;
+    }
+
+.dropdown img:hover {
+    padding: 1px;
+    background-color: var(--blue);
+}
+
+.file {
+    margin: 0;
+    margin-bottom: 5rem;
+    
+}
+
+.files {
+    margin: 0;
+    padding: 0;
+    border: 1px solid white;
+    background-color: var(--black);
+    color: white;
+    font-weight: 600;
+    
+}
+
+.profile {
+    padding: .2rem 1rem;
+    border: 1px solid white;
+    background-color: #212121;
+    text-align: left;
+    
+   
+}
+
+.profile p {
+    margin: 0;
+    margin-bottom: 0.1rem;
+    
+}
+
+
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--black);
+  z-index: 1;
+min-width: auto;
+    
+}
+
+
+.dropdown-content a {
+  color: var(--black);
+  display: block;
+    
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+    min-width: 200px;
+  
+}
+
+
+
+
+
+/* ---------Unterseiten Ende ---------- */
+
+
+
+/* FOOTER */
+/*
+.footer li {
+    display: inline;
+    text-decoration: none;
+} */
+
+.footerp {
+    text-align: end;
+    line-height: 0.6rem;
+}
+
+.bottom {
+    margin-top: 10rem;
+}
+
+hr {
+    margin-bottom: 1rem;
+}
+
+
+/* Impressum, Datenschutz, Kontaktformular */
+
+.strong {
+    margin: 5rem 0rem 1rem 0rem;
+}
+
+address {
+    margin-top: 2rem;
+}
+
+.kontaktformular {
+    font-size: .8rem;
+    max-width: 400rem;
+}
+
+textarea, input {
+    font-family: Consolas, system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", sans-serif;
+    font-size: .8rem;
+    padding: .2rem;
+}
+
+input:focus {
+  background-color: black;
+    color: white;
+}
+
+input:invalid {
+  background-color: #4e4e4e;
+    color: white;
+}
+
+label { 
+    cursor: pointer; 
+    margin-bottom: .5rem;
+    padding-top: 2rem;
+      }      
+
+label[for] { 
+    display: block; 
+      }      
+
+fieldset {
+    margin-top: 2rem;
+    color: white;
+    border: 1px solid white;
+    width: 250px;
+}
+
+legend {
+    padding: 0 .5rem;
+    text-indent: .2rem;   
+    
+}
+
+select {
+    margin: 1rem .5rem .5rem;
+    padding: .2rem 0 .3rem 0;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    width: 120px;
+}
+
+button {
+    font-size: inherit; 
+    background-color: rgba(78, 78, 78, 0.42);
+    color: white; 
+    padding: 0.5rem; 
+    margin: 1rem 0 3rem;
+    cursor: pointer;
+    border: 1px solid white;    
+      }      
+
+textarea, input {
+    width: 250px;
+    height: auto;
+}
+
+.small-quarters {
+    margin: 0 .4rem 0 0;
+    padding: 0;
+    width: 10px;
+    height: auto;
+}
+
+.dsgvo {
+    font-size: 0.7rem;
+    line-height: 1rem;
+    padding-top: 1rem;
+}
+
+/* 
+GRID 
+*/
+
+@supports (display:grid) {
+    .grid-container {
+        max-width: 960px;  
+    }}
+
+
+
+/* Gridcontainer für Stage + Bilder */
+
+@media screen and (min-width: 601px) {
+    .grid-container > .drei {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        grid-gap: 2rem;
+        margin-bottom: 5rem;
+    }}
+
+@media screen and (min-width: 1px) and (max-width: 600px) {
+    .grid-container > .drei {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        grid-gap: 2rem;
+        margin-bottom: 5rem;
+    }
+    .drei {
+        margin: 0
+    }}
+
+@media screen and (min-width: 601px) {
+    .grid-container > .vier,  .grid-container > .charafiles {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        grid-gap: 2rem;
+        margin-bottom: 5rem;
+    }}
+
+@media screen and (min-width: 501px) and (max-width: 600px) {
+    .grid-container > .vier,  .grid-container > .charafiles {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        grid-gap: 2rem;
+        margin-bottom: 5rem;
+
+    }}
+
+@media screen and (min-width: 1px) and (max-width: 500px) {
+    .grid-container > .vier,  .grid-container > .charafiles {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        grid-gap: 2rem;
+        margin-bottom: 5rem;
+        }
+   
+    .vier {
+        margin: 0;
+    }}
+
+
+
+/* Breakpoints: nav, two-col, blockquote/cite, bildtext, vita */
+
+@media screen and (min-width: 1px) and (max-width: 400px) {
+    body {
+      max-width: 100%;  
+    }
+    
+.bildtext {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: .4rem .2rem;
+    font-size: 2rem; 
+    line-height: 2.2rem;
+ } }
+    
+
+@media screen and (min-width: 1px) and (max-width: 780px) {
+    .navbarl ul, .navbarr ul { display: flex;
+        flex-flow: column wrap;
+        align-items: center;}
+    
+    nav ul {
+       display: flex;
+       flex-flow: column wrap;
+       align-items: center;}
+    
+    ul li {
+       margin: 10vw;
+    } 
+    
+    .book-section-nav {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;   
+        justify-items: baseline;}
+    
+    ul li {
+        margin: 1rem;
+    }}
+
+@media screen and (min-width: 1px) and (max-width: 880px) {
+    .site-nav ul {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;  
+        align-items: center;
+        }
+    
+    ul li {
+        margin: 1rem;
+        
+    }}
+
+@media screen and (min-width:1px) and (max-width: 700px) {
+    .two-col {
+    column-count: 1;
+    }
+    .main-descr {
+        margin: 2.5rem 0;
+    }
+}
+
+@media screen and (min-width:1px) and (max-width: 450px) {
+    .series {
+        font-size: 1.2rem;
+    }
+    .series-book {
+       font-size: 3rem; 
+    }} 
+
+
+@media screen and (min-width: 1px) and (max-width: 900px) {
+.vita-flex {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 0rem 30rem 0rem;
+}
+    .flex-row-text {
+        max-width: 80vw;
+    }
+    
+    .flex-row-pic {
+        max-width: 80vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        margin-bottom: 4rem;
+    }}
+
+@media screen and (min-width: 1px) and (max-width: 600px) {
+    .vita {
+    margin: 5rem 3rem 0rem 3rem;
+    column-count: 1;
+}}

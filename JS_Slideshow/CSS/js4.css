@@ -1,0 +1,33 @@
+﻿body {font-family:Verdana; font-size:11pt; color:#202020;
+      background-color:#f8f8f8;}
+td   {font-size:11pt; background-color:#e0e0e0; padding:5px;}
+
+@media only screen and (max-width: 992px)
+{
+   @media only screen and (orientation:landscape)
+   {
+      body                 { font-size:20pt; }
+      td                   { font-size:20pt; }
+      img                  { width:240px; height:180px; }
+      input                { font-size:20pt; } 
+      select               { font-size:20pt; } 
+      input[type=radio]    { width:30px; height:30px; } 
+      input[type=checkbox] { width:30px; height:30px; } 
+      input[type=color]    { width:250px; height:30px; } 
+      input[type=range]    { width:250px; height:30px; } 
+      textarea             { font-size:20pt; height:80px; } 
+   }
+   @media only screen and (orientation:portrait)
+   {
+      body                 { font-size:32pt; }
+      td                   { font-size:36pt; }
+      img                  { width:320px; height:240px; }
+      input                { font-size:32pt; } 
+      select               { font-size:32pt; } 
+      input[type=radio]    { width:45px; height:45px; } 
+      input[type=checkbox] { width:45px; height:45px; } 
+      input[type=color]    { width:250px; height:45px; } 
+      input[type=range]    { width:250px; height:45px; } 
+      textarea             { font-size:32pt; height:140px; } 
+   }
+}
